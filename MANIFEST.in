@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include online_store_qty_divide *.css
+recursive-include online_store_qty_divide *.csv
+recursive-include online_store_qty_divide *.html
+recursive-include online_store_qty_divide *.ico
+recursive-include online_store_qty_divide *.js
+recursive-include online_store_qty_divide *.json
+recursive-include online_store_qty_divide *.md
+recursive-include online_store_qty_divide *.png
+recursive-include online_store_qty_divide *.py
+recursive-include online_store_qty_divide *.svg
+recursive-include online_store_qty_divide *.txt
+recursive-exclude online_store_qty_divide *.pyc
