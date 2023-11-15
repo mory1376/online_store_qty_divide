@@ -1,0 +1,71 @@
+### App Versions
+```
+{
+	"erpnext": "14.40.0",
+	"field_test": "0.0.1",
+	"frappe": "14.50.0",
+	"frappe_whatsapp": "0.0.2",
+	"online_store_inventory": "0.0.1",
+	"online_store_qty_divide": "0.0.1",
+	"shoukinet_customization": "0.0.1"
+}
+```
+### Route
+```
+query-report/online store invntory
+```
+### Traceback
+```
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 95, in application
+    response = frappe.api.handle()
+  File "apps/frappe/frappe/api.py", line 54, in handle
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 47, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 85, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1622, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/__init__.py", line 802, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 239, in run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 802, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 89, in generate_report_result
+    res = get_report_result(report, filters) or []
+  File "apps/frappe/frappe/desk/query_report.py", line 70, in get_report_result
+    res = report.execute_script_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 131, in execute_script_report
+    res = self.execute_module(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 148, in execute_module
+    return frappe.get_attr(method_name)(frappe._dict(filters))
+  File "apps/online_store_qty_divide/online_store_qty_divide/online_store_qty_divide/report/online_store_invntory/online_store_invntory.py", line 20, in execute
+    total_quantity = calculate_total_quantity_for_item(item.name)
+  File "apps/online_store_qty_divide/online_store_qty_divide/online_store_qty_divide/report/online_store_invntory/online_store_invntory.py", line 50, in calculate_total_quantity_for_item
+    filters={'item_code': str(item['name']), 'warehouse': ['in', allowed_warehouse_names]},
+TypeError: string indices must be integers
+
+```
+### Request Data
+```
+{
+	"type": "GET",
+	"args": {
+		"report_name": "online store invntory",
+		"filters": "{\"company\":\"Shouki Electronics LLC\",\"from_date\":\"2023-09-25\",\"to_date\":\"2023-10-25\",\"valuation_field_type\":\"Currency\",\"ignore_closing_balance\":1}",
+		"ignore_prepared_report": false,
+		"are_default_filters": false
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.query_report.run"
+}
+```
+### Response Data
+```
+{
+	"exception": "TypeError: string indices must be integers"
+}
+```
