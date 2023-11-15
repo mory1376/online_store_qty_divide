@@ -20,7 +20,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-10 13:47:12.518249",
+ "modified": "2023-11-15 15:44:22.603049",
  "modified_by": "Administrator",
  "module": "Online Store Qty Divide",
  "name": "online_inv_allow_warehouse",
@@ -32,9 +32,58 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "System Manager",
+   "role": "Item Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Stock Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Stock User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Sales User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Purchase User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Maintenance User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1
   }
  ],
  "sort_field": "modified",
