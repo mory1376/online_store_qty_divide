@@ -14,16 +14,16 @@
    "fieldname": "warehouse",
    "fieldtype": "Table",
    "label": "warehouse",
-   "options": "online_inv_allow_warehouse_child"
+   "options": "Online Inventory Allow Warehouse Child"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-11-15 15:44:22.603049",
+ "modified": "2023-11-15 15:10:21.012907",
  "modified_by": "Administrator",
  "module": "Online Store Qty Divide",
- "name": "online_inv_allow_warehouse",
+ "name": "online Inventory Allow Warehouse",
  "owner": "Administrator",
  "permissions": [
   {

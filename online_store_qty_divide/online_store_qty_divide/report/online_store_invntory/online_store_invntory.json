@@ -11,7 +11,7 @@
  "is_standard": "Yes",
  "json": "{}",
  "letter_head": "b_header",
- "modified": "2023-10-29 11:47:05.797656",
+ "modified": "2023-11-15 15:15:43.259296",
  "modified_by": "Administrator",
  "module": "Online Store Qty Divide",
  "name": "online store invntory",
@@ -41,6 +41,9 @@
   },
   {
    "role": "Account-User-Low"
+  },
+  {
+   "role": "Sales User"
   }
  ]
 }

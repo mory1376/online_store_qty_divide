@@ -39,7 +39,6 @@ class CustomItem(Document):
                     total_quantity += temp_total_quantity
 
         self.custom_total_qty = total_quantity
-        if self.custom_total_qty > 0:
 
 @frappe.whitelist()
 def get_asset_naming_series():
