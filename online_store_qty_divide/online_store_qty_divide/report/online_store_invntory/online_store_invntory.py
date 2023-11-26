@@ -131,7 +131,7 @@ def get_items():
 
 def calculate_total_quantity_for_item(item):
     total_quantity = 0
-    warehouses = frappe.get_doc("online Inventory Allow Warehouse")
+    warehouses = frappe.get_doc("online_inv_allow_warehouse")
     allowed_warehouses = warehouses.warehouse
     allowed_warehouse_names = [child.warehouse for child in allowed_warehouses]
 
